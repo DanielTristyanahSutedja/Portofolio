@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio Saya</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #1e88e5;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #1565c0;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      padding: 1rem;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background-color: #0d47a1;
+    }
+    section {
+      padding: 2rem;
+      display: none;
+    }
+    section.active {
+      display: block;
+    }
+    footer {
+
+  background-color: #1e88e5;
+  color: white;
+  text-align: center;
+  padding: 0.3rem 0.5rem; /* lebih ramping */
+  font-size: 0.75rem;     /* lebih kecil */
+  width: 100%;
+}
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .card {
+      flex: 1;
+      min-width: 150px;
+      background: #f1f8ff;
+      padding: 1rem;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      background-color: #e3f2fd;
+    }
+    .info-list {
+      list-style: none;
+      padding: 0;
+    }
+    .info-list li {
+      margin: 0.5rem 0;
+      font-size: 1rem;
+    }
+    .info-list i {
+      margin-right: 0.5rem;
+      color: #1565c0;
+    }
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+    }
+
+    .foto-profil {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 8px rgba(0,0,0,0.12);
+  flex-shrink: 0;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome To My Portofolio</h1>
+  </header>
+
+  <nav>
+    <a href="#" onclick="showSection('dashboard')">Dashboard</a>
+    <a href="#" onclick="showSection('tentang')">About Me</a>
+    <a href="#" onclick="showSection('kontak')">My Contact</a>
+    <a href="#" onclick="showSection('tutorial')">Hosting Tutorials</a>
+  </nav>
+
+  <main>
+    <section id="dashboard" class="active">
+      <h2><i class="fas fa-tachometer-alt"></i> Dashboard</h2>
+      <p>Halo 👋! Saya seorang <strong>Pekerja Swasta</strong> yang sedang fokus dengan pekerjaan dan kelulusan saya untuk menjadi sarjana.</p>
+      <div class="card-container">
+        <div class="card">
+          <i class="fas fa-laptop-code fa-2x"></i>
+          <p>Frontend Developer</p>
+          <p>Frontend Developer adalah seorang pengembang perangkat lunak yang bertanggung jawab untuk membangun bagian antarmuka (tampilan) dari sebuah situs web atau aplikasi yakni bagian yang langsung berinteraksi dengan pengguna (user).</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-code fa-2x"></i>
+          <p>HTML, CSS, JS</p>
+          <p>HTML adalah singkatan dari HyperText Markup Language. HTML adalah bahasa standar yang digunakan untuk membuat struktur dan konten dari sebuah halaman web.</p>
+          <p>CSS adalah  (Cascading Style Sheets) digunakan untuk mengatur tampilan dan desain visual dari halaman web, termasuk warna, layout, font, serta responsivitas tampilan di berbagai perangkat.</p>
+          <p>JS adalah JavaScript (JS) adalah bahasa pemrograman yang digunakan untuk menambahkan interaktivitas dan logika pada halaman web, seperti mengatur animasi, menangani event klik, atau memvalidasi formulir secara dinamis.</p>
+        </div>
+        <div class="card">
+          <i class="fas fa-mobile-alt fa-2x"></i>
+          <p>Responsive Design</p>
+          <p>Responsive Design adalah pendekatan dalam desain web yang membuat tampilan website dapat menyesuaikan secara otomatis dengan ukuran layar atau perangkat yang digunakan, seperti :</p>
+          <p>Komputer / Laptop</p>
+            <p>Tablet</p>
+            <p>Smartphone</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tentang">
+        <h2><i class="fas fa-user"></i> Tentang Saya</h2>
+        <div class="tentang-container">
+          <img src="Dens.jpeg" alt="Foto Profil Saya" class="foto-profil" />
+          <div>
+      <p>Saya adalah individu yang aktif, disiplin, dan memiliki semangat tinggi dalam bidang olahraga serta administrasi perkantoran. Berbekal latar belakang pendidikan dari SMK hingga perguruan tinggi, serta pengalaman kerja di lingkungan perusahaan dan kantor notaris, saya terbiasa bekerja dengan tim, bertanggung jawab atas tugas, dan mampu menyesuaikan diri dengan berbagai situasi kerja. Saya percaya bahwa kombinasi antara kedisiplinan olahraga dan keterampilan administrasi adalah kekuatan utama saya.
+
+        .</p>
+      <ul class="info-list">
+        <li><i class="fas fa-graduation-cap"></i> Jurusan Teknik Informatika</li>
+        <li><i class="fas fa-briefcase"></i> Notaris Dewi Mulyani, SH.,M.Kn.</li>
+        <li><i class="fas fa-heart"></i> Hobi: Olahraga (Sepak Bola & Badminton)</li>
+      </ul>
+    </section>
+
+    <section id="kontak">
+      <h2><i class="fas fa-envelope"></i> Kontak Saya</h2>
+      <p>Silakan hubungi saya melalui:</p>
+      <ul class="info-list">
+        <li><i class="fas fa-envelope"></i> Email: <a href="danielsuteja35@gmail.com">danielsuteja35@email.com</a></li>
+        <li><i class="fab fa-whatsapp"></i> WhatsApp: <a href="https://wa.me/6285717930268" target="_blank">0857-1793-0268</a></li>
+        <li><i class="fab fa-instagram"></i> Instagram: <a href="https://instagram.com/saya" target="_blank">@danieldreyar</a></li>
+
+      </ul>
+    </section>
+
+    <section id="tutorial">
+      <h2><i class="fas fa-globe"></i> Tutorial Hosting Website</h2>
+      <p>Berikut langkah-langkah mudah untuk mengonlinekan website Anda:</p>
+      <ol class="info-list">
+        <li><i class="fas fa-cart-plus"></i> Beli domain dari penyedia terpercaya (Niagahoster, Domainesia, GoDaddy).</li>
+        <li><i class="fas fa-server"></i> Pilih paket hosting dan daftar akun.</li>
+        <li><i class="fas fa-link"></i> Hubungkan domain ke hosting melalui pengaturan <strong>Nameserver</strong>.</li>
+        <li><i class="fas fa-upload"></i> Upload file website ke folder <code>public_html</code> menggunakan File Manager atau FTP (FileZilla).</li>
+        <li><i class="fas fa-eye"></i> Buka domain Anda di browser untuk melihat hasilnya.</li>
+      </ol>
+      <p><strong>Tips:</strong> Gunakan cPanel jika Anda pemula karena antarmukanya sangat ramah pengguna.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Portofolio Saya</p>
+  </footer>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
